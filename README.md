@@ -16,10 +16,10 @@ If you don't specify a bucket name and folder name in the view, it will look for
 Environment Variable   
 --------------------    
 
-export AWS_BUCKET=<your bucket name>   
-export AWS_BUCKET_FOLDER=<folder name>  \#if any   
-export AWS_ACCESS_KEY_ID=<Your S3 Access Key>    
-export AWS_SECRET_ACCESS_KEY=<Your S3 Secret key>   
+export AWS_BUCKET=your bucket name    
+export AWS_BUCKET_FOLDER=folder name   \#if any   
+export AWS_ACCESS_KEY_ID=Your S3 Access Key    
+export AWS_SECRET_ACCESS_KEY=Your S3 Secret key   
 export S3_DIR=source/images/TO_S3    
 
 Example
@@ -27,4 +27,5 @@ Example
     Here is an image:  {% AWS_S3_Image ash2.jpg bucket:my.bucket folder:friends/avatars/000/000/003/original %}  
     Here is an image:  {% AWS_S3_Image myimage.jpg %}  # with configuration used form _config.yml    
     
-Note that this is an extension to jmartin's [s3_image tag](https://github.com/jmartin2683/s3_image_tag)    
+Note that this is an extension to s3_image_tag, you can find [here](https://github.com/TheAshwanik/s3_image_tag)
+and [here](https://github.com/jmartin2683/s3_image_tag)    
