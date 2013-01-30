@@ -34,17 +34,17 @@ Environment Variable
     												  \# tag to refer s3 images/files    
     
 \# If you want to avoid referencing the annoyingly long aws s3 url, you can set your custom domain url 
-and set it as an env variable    
+and set it as an env variable    (You will have to setup your CNAME for this, Refer to one of my post 'Coming Soon')   
  
     export AWS_CUSTOM_DOMAIN=pics.mydomain.com   
         
 In this case the final html will have image tag as   
 
-    \<img src="http://pics.mydomain.com/folder/image.jpg">    
+    <img src="http://pics.mydomain.com/folder/image.jpg">    
      
 And you can avoid the URLs in form of    
 	
-    \<img src="https://s3.amazonaws.com/bucket/folder/image.jpg">  
+    <img src="https://s3.amazonaws.com/bucket/folder/image.jpg">  
 	
 
 Example
