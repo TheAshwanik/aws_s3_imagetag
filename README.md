@@ -21,11 +21,17 @@ Environment Variable
 (I did not want to expose the credential, so using ENV variables )    
 
     export AWS_BUCKET=your bucket name     
-    export AWS_BUCKET_FOLDER=folder name   \# if your images are under a folder inside the bucket        
+    
+    export AWS_BUCKET_FOLDER=folder name              \# if your images are under a folder inside the bucket   
+          
     export AWS_ACCESS_KEY_ID=Your S3 Access Key     
+    
     export AWS_SECRET_ACCESS_KEY=Your S3 Secret key     
-    export S3_DIR=source/images/TO_S3   \# Directory from where the files will be uploaded     
-    export AWS_UPLOAD=true    \# set false if you dont want to upload and just use the tag to refer s3 images/files    
+    
+    export S3_DIR=source/images/TO_S3                 \# Directory from where the files will be uploaded   
+       
+    export AWS_UPLOAD=true                            \# set false if you dont want to upload and just use the 
+    												  \# tag to refer s3 images/files    
     
 \# If you want to avoid referencing the annoyingly long aws s3 url, you can set your custom domain url 
 and set it as an env variable    
@@ -36,8 +42,8 @@ In this case the final html will have image tag as
 
     \<img src="http://pics.mydomain.com/folder/image.jpg">    
      
-An you can avoid the URLs in form of    
-
+And you can avoid the URLs in form of    
+	
     \<img src="https://s3.amazonaws.com/bucket/folder/image.jpg">  
 	
 
