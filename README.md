@@ -26,9 +26,15 @@ Environment Variable
     export AWS_SECRET_ACCESS_KEY=Your S3 Secret key     
     export S3_DIR=source/images/TO_S3   \# Directory from where the files will be uploaded     
     export AWS_UPLOAD=true    \# set false if you dont want to upload and just use the tag to refer s3 images/files    
-    \# If you want to avoid referencing the annoyingly long aws s3 url, you can set your custom domain url 
-    and set it as an env variable     
-    export AWS_CUSTOM_DOMAIN=pics.mydomain.co.in     
+    
+\# If you want to avoid referencing the annoyingly long aws s3 url, you can set your custom domain url 
+and set it as an env variable     
+    export AWS_CUSTOM_DOMAIN=pics.mydomain.com     
+In this case the final html will have image tag as   
+	\<img src="http://pics.mydomain.com/folder/image.jpg"\>   
+An you can avoid the URLs in form of   
+	\<img src="https://s3.amazonaws.com/bucket/folder/image.jpg"\>  
+	
 
 Example
 -------
