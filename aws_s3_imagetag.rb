@@ -22,7 +22,14 @@ module Jekyll
 
             Dir.foreach(s3_dir) do |file|
               next if file == '.' or file == '..'
-              AWS::S3::S3Object.store( file, File.open(s3_dir + "/" + file), bucket,:access => :public_read)
+              AWS::S3::S3Object.store(
+                file,
+                File.open(s3_dir + "/" + file),
+                bucket,
+                :cache_control => "max-age=#{one_year_in_seconds}",
+                :expires => one_year_from_now.httpdate,
+                :access => :public_read
+              )
               puts "Uploaded #{file} to bucket=> #{bucket}!"
             end
         rescue SystemCallError, AWS::S3::ResponseError => error
