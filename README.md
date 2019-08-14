@@ -57,6 +57,4 @@ And you can avoid the URLs in form of
 - `{% AWS_S3_Image myimage.jpg %} # with configuration used form _config.yml`
 
 
-# Tutorials
 
-- [Host Images on S3 with Octopress](http://www.habdas.org/host-images-on-s3-with-octopress/) using Travis CI
